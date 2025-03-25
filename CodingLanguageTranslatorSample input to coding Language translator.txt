@@ -1,0 +1,39 @@
+sample input in postman
+post request raw json
+url http://127.0.0.1:8000/chain/batch
+
+
+
+{
+  "inputs": [
+    {
+      "language": "Python",
+      "text": "public class SwapVariables {\n    public static void main(String[] args) {\n        int a = 5;\n        int b = 10;\n\n        System.out.println(\"Before swapping: a = \" + a + \", b = \" + b);\n\n        // Using a for loop to swap the variables\n        for (int i = 0; i < 1; i++) {\n            int temp = a;\n            a = b;\n            b = temp;\n        }\n\n        System.out.println(\"After swapping: a = \" + a + \", b = \" + b);\n    }\n}"
+
+
+    }
+  ],
+  "config": {},
+  "kwargs": {}
+}
+
+
+output recieved
+ "output": [
+        "```python\na = 5\nb = 10\n\nprint(\"Before swapping: a =\", a, \", b =\", b)\n\n# Using a for loop to swap the variables\nfor i in range(1):\n    temp = a\n    a = b\n    b = temp\n\nprint(\"After swapping: a =\", a, \", b =\", b)\n```\n\n**Explanation:**\n\n1. **Variable Declaration:**\n   - `a = 5` and `b = 10` directly assign values to the variables in Python, just like in Java.\n\n2. **Printing:**\n   -  `print(\"Before swapping: a =\", a, \", b =\", b)` uses the `print()` function to display the values of `a` and `b` before swapping.\n\n3. **For Loop:**\n   - `for i in range(1):` is the Python equivalent of `for (int i = 0; i < 1; i++)`. It iterates once because `range(1)` generates a sequence from 0 to (but not including) 1.\n   - Inside the loop:\n     - `temp = a` stores the value of `a` in a temporary variable `temp`.\n     - `a = b` assigns the value of `b` to `a`.\n     - `b = temp` assigns the value stored in `temp` (which was originally `a`) to `b`, effectively swapping the values.\n\n4. **Printing After Swapping:**\n   - `print(\"After swapping: a =\", a, \", b =\", b)` prints the values of `a` and `b` after the swap.\n\n\n\nLet me know if you have any other code snippets you'd like translated!\n"
+    ],
+
+    formatted output
+    a = 5
+b = 10
+
+print("Before swapping: a =", a, ", b =", b)
+
+# Using a for loop to swap the variables
+for i in range(1):
+    temp = a
+    a = b
+    b = temp
+
+print("After swapping: a =", a, ", b =", b)
+
